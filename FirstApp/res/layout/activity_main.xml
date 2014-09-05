@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    tools:context="com.example.firstapp.MainActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_mail"/>
+    <TextView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/second_mail"/>
+    <TextView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/third_mail"/>
+    <TextView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fourth_mail"/>
+    <TextView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fifth_mail" />
+
+</LinearLayout>

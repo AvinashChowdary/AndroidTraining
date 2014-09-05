@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">EditTextDemo</string>
+    <string name="text_login">Login</string>
+    <string name="text_username">UserName</string>
+    <string name="text_password">Password</string>
+    <string name="hint_un">Enter Your E-mail Id</string>
+    <string name="hint_pwd">Enter Password &#8230;</string>
+    <string name="text_signin">SIGN IN</string>
+    <string name="text_signup">SIGN UP</string>
+</resources>

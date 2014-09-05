@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Rotate Screen</string>
+    <string name="hint_port">Enter your Stream!!!</string>
+    <string name="btn_port">Submit</string>
+    <string name="hint_land"></string>
+    <string name="btn_land">Submit</string>
+
+</resources>

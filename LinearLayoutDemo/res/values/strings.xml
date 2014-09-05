@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">LinearLayoutDemo</string>
+    <string name="button_ios">iOS</string>
+    <string name="button_android">Android</string>
+    <string name="button_webapps">Web Apps</string>
+    <string name="button_ror">Ruby On Rails</string>
+    <string name="button_windows">Windows</string>
+    <string name="button_testing">Testing</string>
+    <string name="button_bb">BlackBerry</string>
+    <string name="button_success">Success</string>
+
+</resources>

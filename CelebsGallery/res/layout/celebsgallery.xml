@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:isScrollContainer="true"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_mahesh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_mahesh" />
+
+    <Button
+        android:id="@+id/btn_ntr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_ntr" />
+
+    <Button
+        android:id="@+id/btn_ram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_ram" />
+
+    <Button
+        android:id="@+id/btn_prabhas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_prabhas" />
+
+    <Button
+        android:id="@+id/btn_aa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_aa" />
+
+    <Button
+        android:id="@+id/btn_anushka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_anushka" />
+
+    <Button
+        android:id="@+id/btn_samantha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_samantha" />
+
+    <Button
+        android:id="@+id/btn_ajith"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_ajith" />
+
+    <Button
+        android:id="@+id/btn_rajni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_rajni" />
+
+    <Button
+        android:id="@+id/btn_sh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_sh" />
+
+    <Button
+        android:id="@+id/btn_js"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/txt_js" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">ButtonDemo</string>
+    <string name="button_java">Java</string>
+    <string name="button_xcode">xCode</string>
+    <string name="button_c">C</string>
+    <string name="button_cplus">C++</string>
+    <string name="button_python">Python</string>
+    <string name="button_haskell">Haskell</string>
+    <string name="button_mp">MicroProcessor</string>
+    <string name="button_done">Done</string>
+
+</resources>

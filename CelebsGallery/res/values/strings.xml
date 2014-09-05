@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">Celebs Gallery</string>
+    <string name="txt_mahesh">Mahesh Babu</string>
+    <string name="txt_ntr">N.T.R</string>
+    <string name="txt_ram">Ram Pothineni</string>
+    <string name="txt_prabhas">Prabhas</string>
+    <string name="txt_aa">Allu Arjun</string>
+    <string name="txt_anushka">Anushka</string>
+    <string name="txt_js">Jason Stathom</string>
+    <string name="txt_sh">Srithi Hassan</string>
+    <string name="txt_rajni">Rajni Kanth</string>
+    <string name="txt_samantha">Samantha</string>
+    <string name="txt_ajith">Ajith</string>
+    
+</resources>
