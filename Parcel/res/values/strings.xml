@@ -1,5 +1,12 @@
 <resources>
 
     <string name="app_name">Parcel</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="empid_hint">Enter Your Employee ID</string>
+    <string name="dept_hint">Which Department Do Your Belong !!!</string>
+    <string name="salary_hint">What is Your Salary ???</string>
+    <string name="label_send">Employee Alumini</string>
+    <string name="label_rec">Welcome To Alumini</string>
+    <string name="button_txt">Submit</string>
 
 </resources>
