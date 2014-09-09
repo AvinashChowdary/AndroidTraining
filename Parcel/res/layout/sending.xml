@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/banner" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/label"
+        android:gravity="center"
+        android:text="@string/label_send"
+        android:textColor="@color/txt"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/name_edt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="@string/name_hint"
+        android:textColorHint="@color/txt" />
+
+    <EditText
+        android:id="@+id/empid_edt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="@string/empid_hint"
+        android:textColorHint="@color/txt" />
+
+    <EditText
+        android:id="@+id/dept_edt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="@string/dept_hint"
+        android:textColorHint="@color/txt" />
+
+    <EditText
+        android:id="@+id/salary_edt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="@string/salary_hint"
+        android:textColorHint="@color/txt" />
+    
+    <Button android:id="@+id/submit_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_txt"
+        android:background="@color/button"/>
+
+</LinearLayout>
