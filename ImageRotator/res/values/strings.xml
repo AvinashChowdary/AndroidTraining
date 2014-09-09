@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Image Rotator</string>
+    <string name="txt_edt">This View is in</string>
+    <string name="company_txt">Enter Your Company Name</string>
+    <string name="submit">Submit</string>
+    
+</resources>
