@@ -1,0 +1,24 @@
+package com.pcs.implicitintent;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class ImplicitActivity extends Activity {
+	
+	private Button callBtn, contactsBtn, emailBtn, browserBtn, musicBtn; 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.layout);
+		
+		callBtn = (Button) findViewById(R.id.call);
+		contactsBtn = (Button) findViewById(R.id.browser);
+		emailBtn = (Button) findViewById(R.id.mail);
+		browserBtn = (Button) findViewById(R.id.browser);
+		musicBtn = (Button) findViewById(R.id.music);
+		
+	}
+
+}

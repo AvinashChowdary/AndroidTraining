@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">Implicit Intent</string>
-    
+    <string name="chooser">Open With</string>
+    <string name="banner_txt">Welcome to iPhone</string>
 
 </resources>
