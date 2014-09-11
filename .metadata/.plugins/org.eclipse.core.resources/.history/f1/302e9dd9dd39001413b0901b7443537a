@@ -1,0 +1,5 @@
+package om.pcs.receiver;
+
+public class ReceivingActivity {
+
+}

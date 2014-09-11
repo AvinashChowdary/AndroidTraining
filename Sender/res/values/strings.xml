@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Sender</string>
+    <string name="text_txt">Text</string>
+    <string name="image_txt">Image</string>
+    <string name="browse_txt">Browse</string>
+    <string name="messgae_txt">This Appears as a result of clicking on Text Button</string>
+    
+    
+
+</resources>

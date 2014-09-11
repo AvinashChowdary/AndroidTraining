@@ -1,0 +1,52 @@
+package om.pcs.receiver;
+
+
+import android.R;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.pcs.constants.Constants;
+
+
+public class ReceivingActivity extends Activity {
+
+	private TextView txtView;
+	private ImageView imageView;
+	private WebView webView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.receiver);
+
+		String action = getIntent().getAction();
+
+		if(action.equals(Constants.InentExtras.TEXT)){
+
+			txtView.setVisibility(View.VISIBLE);
+			txtView.setText(R.string.messgae_txt);
+
+		}
+
+		if(action.equals(Constants.InentExtras.TEXT)){
+
+			imageView.setVisibility(View.VISIBLE);
+			imageView.setImageResource(R.drawable.showimage);
+
+		}
+
+		if(action.equals(Constants.InentExtras.TEXT)){
+
+			webView.setVisibility(View.VISIBLE);
+			webView.loadUrl("www.paradigmcreatives.com");
+
+		}
+
+	}
+
+}

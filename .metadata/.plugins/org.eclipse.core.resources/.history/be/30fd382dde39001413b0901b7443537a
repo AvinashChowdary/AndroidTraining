@@ -1,0 +1,18 @@
+package om.pcs.receiver;
+
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.pcs.receiver.R;
+
+public class ReceivingActivity extends Activity {
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.receiver);
+	}
+
+}

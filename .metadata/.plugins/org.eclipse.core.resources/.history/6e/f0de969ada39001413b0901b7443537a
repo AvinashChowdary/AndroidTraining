@@ -1,0 +1,9 @@
+package com.pcs.constants;
+
+public class Constants {
+	public static interface InentExtras{
+		public static final String TEXT = "com.pcs.receiver.SHOW_TEXT";
+		public static final String MSG = "This Appears as a result of clicking on Text Button"; 
+	}
+
+}
