@@ -4,5 +4,6 @@
     <string name="image_txt">Image</string>
     <string name="text_txt">Text</string>
     <string name="webpage_txt">Google</string>
+    <string name="banner">Can Open Anything</string>
 
 </resources>
