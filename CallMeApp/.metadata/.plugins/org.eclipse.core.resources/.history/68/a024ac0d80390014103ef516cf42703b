@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Sender</string>
+    <string name="image_txt">Image</string>
+    <string name="text_txt">Text</string>
+    <string name="webpage_txt">Google</string>
+
+</resources>

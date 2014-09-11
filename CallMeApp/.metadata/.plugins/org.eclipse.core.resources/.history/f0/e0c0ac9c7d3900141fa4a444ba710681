@@ -1,0 +1,14 @@
+package com.pcs.sender;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class SendingActivity extends Activity {
+	 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sending);
+	}
+}

@@ -1,0 +1,26 @@
+package com.pcs.sender;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class SendingActivity extends Activity {
+	 
+	
+	private Button imageBtn;
+	private Button webpageBtn;
+	private Button textBtn;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.sending);
+		
+		imageBtn = (Button) findViewById(R.id.image);
+		textBtn = (Button) findViewById(R.id.text);
+		webpageBtn = (Button) findViewById(R.id.webpage);
+		
+	}
+}

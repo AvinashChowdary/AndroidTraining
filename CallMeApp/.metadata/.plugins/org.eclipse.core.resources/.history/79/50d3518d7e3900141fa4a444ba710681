@@ -1,0 +1,11 @@
+package com.pcs.constants;
+
+public class Constants {
+	public static interface IntentExtras {
+		
+		public static final String IMAGE = "";
+		public static final String TEXT = "";
+		public static final String WEBPAGE = "";
+	}
+
+}
