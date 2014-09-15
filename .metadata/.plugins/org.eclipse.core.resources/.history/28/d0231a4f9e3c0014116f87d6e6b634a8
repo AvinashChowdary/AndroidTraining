@@ -1,0 +1,72 @@
+package com.pcs.contactmanager;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.pcs.adapters.CustomAdapter;
+import com.pcs.model.Contacts;
+
+public class ContactsActivity extends Activity {
+
+	private Button addBtn;
+	private static final int REQ_A = 107;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.contacts);
+
+		addBtn = (Button) findViewById(R.id.add_btn);
+		
+		ListView ls = (ListView) findViewById(R.id.listview);
+		final ArrayList<Contacts> contactslist = new ArrayList<Contacts>();
+		Contacts contact = new Contacts();
+		contact.setName("Avinash");
+		contact.setPhone("9494401747");
+		contact.setEmail("avinash.ravilla@paradigmcreatives.com");
+		CustomAdapter adapter = new CustomAdapter(ContactsActivity.this, contactslist);
+		ls.setAdapter(adapter);
+		ls.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Toast.makeText(ContactsActivity.this, 
+						contactslist.get(position).getName()+"\n"+
+								contactslist.get(position).getPhone()+"\n"+
+								contactslist.get(position).getEmail(),
+								Toast.LENGTH_LONG).show();
+
+			}
+		});
+
+		addBtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(ContactsActivity.this , AddActivity.class);
+				startActivityForResult(intent, REQ_A);
+
+			}
+		});
+		
+		protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		}
+		
+		
+		
+
+
+	}
+
+}

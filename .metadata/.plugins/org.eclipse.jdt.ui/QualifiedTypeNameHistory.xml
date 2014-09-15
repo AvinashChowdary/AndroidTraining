@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.pcs.constants.Constants"/>
+<fullyQualifiedTypeName name="com.pcs.constants.Constants.IntentExtras"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.pcs.contactmanager.AddActivity"/>
+<fullyQualifiedTypeName name="com.pcs.contactmanager.ContactsActivity"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="com.pcs.contactmanager.R"/>
+<fullyQualifiedTypeName name="com.pcs.contactmanager.R.layout"/>
+<fullyQualifiedTypeName name="com.pcs.contactmanager.R.id"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="com.pcs.contactmanager.R.drawable"/>
+</qualifiedTypeNameHistroy>
