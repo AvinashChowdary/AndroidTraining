@@ -33,6 +33,9 @@ public class ContactsActivity extends Activity {
 		contactslist =   new ArrayList<Contacts>();
 		ls = (ListView) findViewById(R.id.listview);
 
+
+		CustomAdapter adapter = new CustomAdapter(ContactsActivity.this, contactslist);
+		ls.setAdapter(adapter);
 		ls.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
