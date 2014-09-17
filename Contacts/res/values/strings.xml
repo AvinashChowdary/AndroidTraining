@@ -10,6 +10,10 @@
     <string name="email_hint">abc@example.com</string>
     <string name="add_txt">Add New Contact</string>
     <string name="contact_add_txt">Add Contacts</string>
+    <string name="dialog_title">Add Contacts</string>
+    <string name="create">Create</string>
+     <string name="cancel">Cancel</string>
+    
     
 
 </resources>

@@ -13,7 +13,7 @@
         android:textColor="@color/white"
         android:textSize="30sp" />
 
-    <GridView
+    <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -21,7 +21,7 @@
         android:fadingEdgeLength="5dp"
         android:horizontalSpacing="5dp"
         android:numColumns="auto_fit" >
-    </GridView>
+    </ListView>
 
     <Button
         android:id="@+id/add_btn"
