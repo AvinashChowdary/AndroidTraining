@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Contact Manager</string>
+    <string name="app_name">Contacts</string>
     <string name="contacts">Contacts</string>
     <string name="name_txt">Name</string>
     <string name="name_hint">Enter User Name</string>
@@ -11,9 +11,22 @@
     <string name="add_txt">Add New Contact</string>
     <string name="contact_add_txt">Add Contacts</string>
     <string name="dialog_title">Add Contacts</string>
+    <string name="edit_title">Edit Contacts</string>
+    <string name="alert_msg">Do You wish to edit the Contact</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="create">Create</string>
-     <string name="cancel">Cancel</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose">Choose the action</string>
     
+    <string-array name="choices">
+        <item >Call</item>
+        <item >Message</item>
+        <item >Mail</item>
+    </string-array>
     
+    <string name="call_toast">Calling </string>
+    <string name="msg_toast">Creating a New Message to </string>
+    <string name="mail_toast">Mailing to </string>
 
 </resources>

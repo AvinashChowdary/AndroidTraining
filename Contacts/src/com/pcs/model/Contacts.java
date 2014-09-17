@@ -1,35 +1,13 @@
 package com.pcs.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 
-public class Contacts implements Parcelable{
+
+public class Contacts {
 
 	private String name;
 	private String phone;
 	private String email;
 
-
-	/**
-	 * Empty Constructor
-	 */
-
-	public Contacts(){
-
-	}
-
-	/**
-	 * This Constructor is used when parcel is sent as argument
-	 * @param source
-	 */
-	
-	public Contacts(Parcel source){
-
-		setName(source.readString());
-		setPhone(source.readString());
-		setEmail(source.readString());
-
-	}
 
 	public String getName() {
 		return name;
@@ -49,35 +27,5 @@ public class Contacts implements Parcelable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	@Override
-	public int describeContents() {
-
-		return 0;
-	}
-	@Override
-	public void writeToParcel(Parcel dest, int flags) {
-		
-		dest.writeString(getName());
-		dest.writeString(getPhone());
-		dest.writeString(getEmail());
-
-
-	}
-	
-	public static final Creator<Contacts> CREATOR = new Creator<Contacts>(){
-
-		@Override
-		public Contacts createFromParcel(Parcel source) {
-			
-			return new Contacts(source);
-		}
-
-		@Override
-		public Contacts[] newArray(int size) {
-			
-			return new Contacts[size];
-		}
-		
-	};
 
 }

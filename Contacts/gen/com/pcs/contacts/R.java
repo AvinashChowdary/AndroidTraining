@@ -8,44 +8,64 @@
 package com.pcs.contacts;
 
 public final class R {
+    public static final class array {
+        public static final int choices=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class color {
         public static final int blue=0x7f040001;
+        public static final int cyan=0x7f040004;
         public static final int grey=0x7f040002;
         public static final int lightblue=0x7f040003;
         public static final int white=0x7f040000;
+        public static final int yellow=0x7f040005;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int call=0x7f020000;
+        public static final int callpic=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int add_btn=0x7f070006;
-        public static final int cancel_btn=0x7f070004;
-        public static final int create_btn=0x7f070003;
-        public static final int email_edt=0x7f070002;
-        public static final int listview=0x7f070005;
-        public static final int name_edt=0x7f070000;
-        public static final int phone_edt=0x7f070001;
+        public static final int add_btn=0x7f08000a;
+        public static final int cancel_btn=0x7f080004;
+        public static final int create_btn=0x7f080003;
+        public static final int email=0x7f080008;
+        public static final int email_edt=0x7f080002;
+        public static final int listview=0x7f080009;
+        public static final int name=0x7f080006;
+        public static final int name_edt=0x7f080000;
+        public static final int phone=0x7f080007;
+        public static final int phone_edt=0x7f080001;
+        public static final int pic=0x7f080005;
     }
     public static final class layout {
         public static final int dialog=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int listview=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class string {
         public static final int add_txt=0x7f050008;
+        public static final int alert_msg=0x7f05000c;
         public static final int app_name=0x7f050000;
-        public static final int cancel=0x7f05000c;
+        public static final int call_toast=0x7f050012;
+        public static final int cancel=0x7f050010;
+        public static final int choose=0x7f050011;
         public static final int contact_add_txt=0x7f050009;
         public static final int contacts=0x7f050001;
-        public static final int create=0x7f05000b;
+        public static final int create=0x7f05000f;
         public static final int dialog_title=0x7f05000a;
+        public static final int edit_title=0x7f05000b;
         public static final int email_hint=0x7f050007;
         public static final int email_txt=0x7f050006;
+        public static final int mail_toast=0x7f050014;
+        public static final int msg_toast=0x7f050013;
         public static final int name_hint=0x7f050003;
         public static final int name_txt=0x7f050002;
+        public static final int no=0x7f05000e;
         public static final int phone_hint=0x7f050005;
         public static final int phone_txt=0x7f050004;
+        public static final int yes=0x7f05000d;
     }
     public static final class style {
         /** 
@@ -69,10 +89,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
