@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.pcs.contacts.R;
 import com.pcs.model.Contacts;
 
@@ -18,6 +19,13 @@ public class CustomAdapter extends BaseAdapter{
 	private Context context;
 	private ArrayList<Contacts> contacts;
 	private LayoutInflater layoutInflater;
+	
+	/**
+	 * Custom constructor to use layout inflaotr and
+	 * set context  
+	 * @param context
+	 * @param contacts
+	 */
 	public CustomAdapter(Context context, ArrayList<Contacts> contacts) {
 		super();
 		this.context = context;
@@ -65,10 +73,15 @@ public class CustomAdapter extends BaseAdapter{
 		holder.name.setText(contacts.get(position).getName());
 		holder.phone.setText(contacts.get(position).getPhone());
 		holder.email.setText(contacts.get(position).getEmail());
-		holder.pic.setImageResource(R.drawable.call);
+		holder.pic.setImageResource(R.drawable.callpic);
 
 		return convertView;
 	}
+
+	/**
+	 * This class is used to create a holder 
+	 * @author Avinash
+	 */
 	public class ViewHolder{
 		public TextView name;
 		public TextView email;
@@ -76,7 +89,23 @@ public class CustomAdapter extends BaseAdapter{
 		public ImageView pic;
 	}
 
-}
+	/**
+	 * This method is used to add a single contact object
+	 * @param contact
+	 */
+	public void addUser(Contacts contact){
+		if(contacts!=null){
+			if(contact!=null){
+				contacts.add(contact); 
+			}
+		}
+		else{
+			throw new IllegalArgumentException("Details Should not be Null");
 
+		}
+		notifyDataSetChanged();
+	}
+
+}
 
 

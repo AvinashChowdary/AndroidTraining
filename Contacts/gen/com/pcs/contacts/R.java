@@ -48,7 +48,7 @@ public final class R {
         public static final int add_txt=0x7f050008;
         public static final int alert_msg=0x7f05000c;
         public static final int app_name=0x7f050000;
-        public static final int call_toast=0x7f050012;
+        public static final int call_toast=0x7f050013;
         public static final int cancel=0x7f050010;
         public static final int choose=0x7f050011;
         public static final int contact_add_txt=0x7f050009;
@@ -58,8 +58,9 @@ public final class R {
         public static final int edit_title=0x7f05000b;
         public static final int email_hint=0x7f050007;
         public static final int email_txt=0x7f050006;
-        public static final int mail_toast=0x7f050014;
-        public static final int msg_toast=0x7f050013;
+        public static final int exception=0x7f050012;
+        public static final int mail_toast=0x7f050015;
+        public static final int msg_toast=0x7f050014;
         public static final int name_hint=0x7f050003;
         public static final int name_txt=0x7f050002;
         public static final int no=0x7f05000e;

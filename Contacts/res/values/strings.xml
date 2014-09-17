@@ -18,6 +18,7 @@
     <string name="create">Create</string>
     <string name="cancel">Cancel</string>
     <string name="choose">Choose the action</string>
+    <string name="exception">Don\'t Leave any Field Empty</string>
     
     <string-array name="choices">
         <item >Call</item>

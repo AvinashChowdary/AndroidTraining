@@ -53,6 +53,9 @@ public class DialogActivity extends Activity {
 
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
+			/**
+			 * To call when user clicks on a contact
+			 */
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -64,22 +67,35 @@ public class DialogActivity extends Activity {
 			}
 		});
 
+		/**
+		 * Click listener to show call,message and 
+		 * email options when user long presses the item
+		 */
+
 		listView.setOnItemLongClickListener(new OnItemLongClickListener() {
 
 			@Override
 			public boolean onItemLongClick(AdapterView<?> parent, View view,
-					int position, long id) {
+					final int position, long id) {
 
 				AlertDialog.Builder alert = new AlertDialog.Builder(DialogActivity.this);
 
 				alert.setTitle(R.string.choose);
 				alert.setItems(R.array.choices, new android.content.DialogInterface.OnClickListener() {
 
+					/**
+					 * To perform actions when user selects one
+					 * among the list in the Dialog
+					 */
+
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						switch (which) {
 						case 0:
-							Toast.makeText(DialogActivity.this, getResources().getString(R.string.call_toast)+phoneEdt.getText().toString(), Toast.LENGTH_LONG).show();
+							String call = "tel:"+contactslist.get(position).getPhone();
+							Intent intent = new Intent(Intent.ACTION_CALL);
+							intent.setData(Uri.parse(call));
+							startActivity(intent);
 							break;
 
 						case 1:
@@ -111,7 +127,10 @@ public class DialogActivity extends Activity {
 		});
 
 
-
+		/**
+		 * This click listener is used
+		 * To add a new contact 
+		 */
 		addBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -137,8 +156,22 @@ public class DialogActivity extends Activity {
 
 				createBtn.setOnClickListener(new OnClickListener() {
 
+
+					/**
+					 * To add the data from entry fields to
+					 * list view
+					 */
 					@Override
 					public void onClick(View v) {
+
+						if(nameEdt.getText().toString()==null || 
+								phoneEdt.getText().toString()==null || 
+								emailEdt.getText().toString()==null){
+							Toast.makeText(DialogActivity.this, 
+									getResources().getString(R.string.exception), 
+									Toast.LENGTH_LONG).show();
+						}
+
 
 						contact.setName(nameEdt.getText().toString());
 						contact.setPhone(phoneEdt.getText().toString());
@@ -154,7 +187,9 @@ public class DialogActivity extends Activity {
 					}
 				});
 
-
+				/**
+				 * To make the dilog disappear on clicking cancel
+				 */
 				cancelBtn.setOnClickListener(new OnClickListener() {
 
 					@Override
