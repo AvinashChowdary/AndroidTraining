@@ -7,10 +7,12 @@
     <string name="priority_txt">Priority</string>
     <string name="set_date">Set Date</string>
     <string name="set_time">Set Time</string>
-    <string name="task_hint">Task to be Reminded</string>
+    <string name="task_hint">Task</string>
     <string name="add_task">Add Task</string>
     <string name="entered_date">Date : </string>
     <string name="entered_time">Time : </string>
     <string name="entered_task">Reminder set for Task : </string>
+    <string name="task_btn">Set</string>
+    <string name="error">Fill all the fields to set Reminder</string>
 
 </resources>

@@ -15,6 +15,7 @@ public final class R {
         public static final int cyan=0x7f040004;
         public static final int grey=0x7f040002;
         public static final int lightblue=0x7f040003;
+        public static final int red=0x7f040006;
         public static final int white=0x7f040000;
         public static final int yellow=0x7f040005;
     }
@@ -22,12 +23,14 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int add_task=0x7f070003;
+        public static final int add_task=0x7f070004;
         public static final int date_btn=0x7f070000;
-        public static final int hidden_date=0x7f070004;
-        public static final int hidden_task=0x7f070006;
-        public static final int hidden_time=0x7f070005;
-        public static final int progress=0x7f070007;
+        public static final int hidden_date=0x7f070005;
+        public static final int hidden_error=0x7f070008;
+        public static final int hidden_task=0x7f070007;
+        public static final int hidden_time=0x7f070006;
+        public static final int progress=0x7f070009;
+        public static final int task_btn=0x7f070003;
         public static final int task_edt=0x7f070002;
         public static final int time_btn=0x7f070001;
     }
@@ -41,9 +44,11 @@ public final class R {
         public static final int entered_date=0x7f050009;
         public static final int entered_task=0x7f05000b;
         public static final int entered_time=0x7f05000a;
+        public static final int error=0x7f05000d;
         public static final int priority_txt=0x7f050004;
         public static final int set_date=0x7f050005;
         public static final int set_time=0x7f050006;
+        public static final int task_btn=0x7f05000c;
         public static final int task_hint=0x7f050007;
         public static final int task_txt=0x7f050003;
         public static final int time_txt=0x7f050002;
