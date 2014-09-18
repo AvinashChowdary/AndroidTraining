@@ -55,7 +55,9 @@ public class InputActivity extends Activity{
 
 
 
-
+		/**
+		 * on Click Date button navigate to dateSetter() method
+		 */
 		dateBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -67,6 +69,9 @@ public class InputActivity extends Activity{
 			}
 		});  
 
+		/**
+		 * on Click Time button navigate to timeSetter() method
+		 */
 		timeBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -77,8 +82,11 @@ public class InputActivity extends Activity{
 			}
 		});
 
+		/**
+		 * on Click Task button set task to reminder
+		 */
 		taskBtn.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				String task = taskEdt.getText().toString();
@@ -86,12 +94,16 @@ public class InputActivity extends Activity{
 				if(!TextUtils.isEmpty(task)){
 					hiddenTask.setText(getResources().getString(R.string.entered_task)+task);
 					taskset = hiddenTask.getText().toString();
-					
+
 					refresh();
 				}
-				
+
 			}
 		});
+
+		/**
+		 * on Clicking reminder button displaying details of the reminder
+		 */
 
 		reminderBtn.setOnClickListener(new OnClickListener() {
 
@@ -109,60 +121,48 @@ public class InputActivity extends Activity{
 					hiddenError.setText(getResources().getString(R.string.error));
 				}
 			}
-			
-				
+
+
 		});
 
 
 
 	}
-
+	/**
+	 * to dynamically set the progress bar
+	 * using the Text.Utils to validate strings
+	 */
 	protected void refresh() {
+
+		int a=1,b=1,c=1;
 
 		Boolean datebool = TextUtils.isEmpty(dateset);
 		Boolean timebool = TextUtils.isEmpty(timeset);
 		Boolean taskbool = TextUtils.isEmpty(taskset);
 
-		if(!datebool){
-			if(!timebool){
-				if(!taskbool){
-					progressBar.setProgress(100);
-				}
-				else{
-					progressBar.setProgress(66);
-				}
-
-			}
-			else if(!taskbool){
-				progressBar.setProgress(66);
-			}
-			else{
-				progressBar.setProgress(33);
-			}
+		if(datebool){
+			a=0;
+		}
+		if(timebool){
+			b=0;
+		}
+		if(taskbool){
+			c=0;
 		}
 
-		else if(!timebool){
-			if(!taskbool){
-				progressBar.setProgress(66);
-			}
-			else{
-				progressBar.setProgress(33);
-			}
-		}
-		else if(!taskbool){
-
-			progressBar.setProgress(33);
-
-		}
-
+		int sum=a+b+c;
+		int progress=sum*33;
+		progressBar.setProgress(progress);
 
 
 
 
 	}
 
+	/**
+	 * To retreive time from calender instance 
+	 */
 	protected void timeSetter() {
-
 		Calendar calendar = Calendar.getInstance();
 		final int hour = calendar.get(Calendar.HOUR_OF_DAY);
 		final int minute = calendar.get(Calendar.MINUTE);
@@ -182,6 +182,9 @@ public class InputActivity extends Activity{
 
 	}
 
+	/**
+	 * To retreive date from calender instance 
+	 */	
 	protected void dateSetter() {
 
 		Calendar calendar = Calendar.getInstance();
@@ -209,15 +212,17 @@ public class InputActivity extends Activity{
 	}
 
 
-
+	/**
+	 * to display the details of selected Reminder
+	 */
 	protected void displayText(){
 		String task = taskEdt.getText().toString();
 
-		
-			hiddenDate.setVisibility(View.VISIBLE);
-			hiddenTime.setVisibility(View.VISIBLE);
-			hiddenTask.setVisibility(View.VISIBLE);
-		
+
+		hiddenDate.setVisibility(View.VISIBLE);
+		hiddenTime.setVisibility(View.VISIBLE);
+		hiddenTask.setVisibility(View.VISIBLE);
+
 
 	}
 
