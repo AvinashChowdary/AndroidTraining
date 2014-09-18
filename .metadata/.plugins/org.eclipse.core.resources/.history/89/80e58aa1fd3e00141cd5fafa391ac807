@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Reminder</string>
+    <string name="set_date">Date</string>
+    <string name="set_time">Time</string>
+    <string name="set_task">Task</string>
+    <string name="set_priority">Priority</string>
+
+</resources>
