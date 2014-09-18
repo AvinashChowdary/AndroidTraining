@@ -86,6 +86,49 @@ public class InputActivity extends Activity{
 
 	}
 
+	protected void refresh() {
+
+		Boolean datebool = TextUtils.isEmpty(dateset);;
+		Boolean timebool = TextUtils.isEmpty(timeset);
+		Boolean taskbool = TextUtils.isEmpty(taskset);
+
+		if(!datebool){
+			if(!timebool){
+				if(!taskbool){
+					progressBar.setProgress(100);
+				}
+				else{
+					progressBar.setProgress(66);
+				}
+
+			}
+			else if(!taskbool){
+				progressBar.setProgress(66);
+			}
+			else{
+				progressBar.setProgress(33);
+			}
+		}
+
+		else if(!timebool){
+			if(!taskbool){
+				progressBar.setProgress(66);
+			}
+			else{
+				progressBar.setProgress(33);
+			}
+		}
+		else if(!taskbool){
+
+			progressBar.setProgress(33);
+
+		}
+
+
+
+
+
+	}
 
 	protected void timeSetter() {
 
@@ -141,7 +184,7 @@ public class InputActivity extends Activity{
 
 		if(!TextUtils.isEmpty(task)){
 			hiddenTask.setText(getResources().getString(R.string.entered_task)+task);
-			
+
 			taskset = hiddenTask.getText().toString();
 			hiddenDate.setVisibility(View.VISIBLE);
 			hiddenTime.setVisibility(View.VISIBLE);
