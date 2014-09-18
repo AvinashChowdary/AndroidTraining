@@ -24,8 +24,10 @@ public final class R {
     public static final class id {
         public static final int add_task=0x7f070003;
         public static final int date_btn=0x7f070000;
-        public static final int hidden_txt=0x7f070004;
-        public static final int progress=0x7f070005;
+        public static final int hidden_date=0x7f070004;
+        public static final int hidden_task=0x7f070006;
+        public static final int hidden_time=0x7f070005;
+        public static final int progress=0x7f070007;
         public static final int task_edt=0x7f070002;
         public static final int time_btn=0x7f070001;
     }
@@ -36,6 +38,9 @@ public final class R {
         public static final int add_task=0x7f050008;
         public static final int app_name=0x7f050000;
         public static final int date_txt=0x7f050001;
+        public static final int entered_date=0x7f050009;
+        public static final int entered_task=0x7f05000b;
+        public static final int entered_time=0x7f05000a;
         public static final int priority_txt=0x7f050004;
         public static final int set_date=0x7f050005;
         public static final int set_time=0x7f050006;

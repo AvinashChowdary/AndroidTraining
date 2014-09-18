@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Reminder</string>
+    <string name="app_name">Set Reminder</string>
     <string name="date_txt">Date</string>
     <string name="time_txt">Time</string>
     <string name="task_txt">Task</string>
@@ -9,5 +9,8 @@
     <string name="set_time">Set Time</string>
     <string name="task_hint">Task to be Reminded</string>
     <string name="add_task">Add Task</string>
+    <string name="entered_date">Date : </string>
+    <string name="entered_time">Time : </string>
+    <string name="entered_task">Reminder set for Task : </string>
 
 </resources>
