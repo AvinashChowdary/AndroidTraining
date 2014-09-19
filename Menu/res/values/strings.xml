@@ -11,5 +11,11 @@
     <string name="set_as_txt">Set as</string>
     <string name="details_txt">Details</string>
     <string name="share_txt">Share</string>
+    <string name="banner_txt">Gallery of Android</string>
+    <string name="view_toast">Viewing image</string>
+    <string name="edit_toast">Edit using Default Android Editor</string>
+    <string name="delete_toast">Deleted</string>
+    <string name="setas_toast">Set as Wallpaper</string>
+    <string name="details_toast">Details of Android</string>
 
 </resources>
