@@ -1,5 +1,15 @@
 <resources>
 
     <string name="app_name">Menu</string>
+    <string name="settings_txt">Settings</string>
+    <string name="rate_txt">Rate Us</string>
+    <string name="contact_us">Contatc Us</string>
+    <string name="about_us">About Us</string>
+    <string name="view_txt">View</string>
+    <string name="edit_txt">Edit</string>
+    <string name="delete_txt">Delete</string>
+    <string name="set_as_txt">Set as</string>
+    <string name="details_txt">Details</string>
+    <string name="share_txt">Share</string>
 
 </resources>

@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Menu</string>
+    <string name="settings_txt">Settings</string>
+    <string name="rate_txt">Rate Us</string>
+    <string name="contact_us">Contatc Us</string>
+    <string name="about_us">About Us</string>
+
+</resources>

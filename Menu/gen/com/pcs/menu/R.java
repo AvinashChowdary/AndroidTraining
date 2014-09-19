@@ -12,9 +12,36 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int share_icon=0x7f020001;
+    }
+    public static final class id {
+        public static final int about=0x7f060008;
+        public static final int contatc=0x7f060009;
+        public static final int delete=0x7f060002;
+        public static final int details=0x7f060004;
+        public static final int edit=0x7f060001;
+        public static final int rate=0x7f060007;
+        public static final int setas=0x7f060003;
+        public static final int settings=0x7f060006;
+        public static final int share=0x7f060005;
+        public static final int view=0x7f060000;
+    }
+    public static final class menu {
+        public static final int context_menu=0x7f050000;
+        public static final int options_menu=0x7f050001;
     }
     public static final class string {
+        public static final int about_us=0x7f030004;
         public static final int app_name=0x7f030000;
+        public static final int contact_us=0x7f030003;
+        public static final int delete_txt=0x7f030007;
+        public static final int details_txt=0x7f030009;
+        public static final int edit_txt=0x7f030006;
+        public static final int rate_txt=0x7f030002;
+        public static final int set_as_txt=0x7f030008;
+        public static final int settings_txt=0x7f030001;
+        public static final int share_txt=0x7f03000a;
+        public static final int view_txt=0x7f030005;
     }
     public static final class style {
         /** 
