@@ -43,9 +43,7 @@ public class MenuActivity extends Activity{
 		fourth_image = (ImageView) findViewById(R.id.image4);
 		fifth_image = (ImageView) findViewById(R.id.image5);
 		sixth_image = (ImageView) findViewById(R.id.image6);
-/**
- * Registering All the images for Context Menus
- */
+
 		registerForContextMenu(first_image);
 		registerForContextMenu(second_image);
 		registerForContextMenu(third_image);
@@ -83,9 +81,7 @@ public class MenuActivity extends Activity{
 
 
 		switch(id){
-/**
- * Toast the item selected based on the Order of items in the context menu
- */
+
 		case 0:
 			Toast.makeText(MenuActivity.this, 
 					getResources().getString(R.string.view_toast), 
