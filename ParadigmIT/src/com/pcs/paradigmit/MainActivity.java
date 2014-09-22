@@ -2,10 +2,12 @@ package com.pcs.paradigmit;
 
 import java.util.ArrayList;
 
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,12 +36,12 @@ public class MainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		getSupportFragmentManager().beginTransaction()
+	/*	getSupportFragmentManager().beginTransaction()
 		.add(R.id.left_fragment, new LeftFragment(MainActivity.this)).commit();
 
 
 		getSupportFragmentManager().beginTransaction()
-		.add(R.id.right_fragment, new RightFragment()).commit();
+		.add(R.id.right_fragment, new RightFragment()).commit();*/
 
 	}
 
@@ -70,11 +72,12 @@ public class MainActivity extends FragmentActivity {
 	 */
 	public static class LeftFragment extends Fragment {
 
-		private Context context;
+		
 
-		public LeftFragment(Context context) {
-			this.context = context;
+		public LeftFragment() {
+		
 		}
+		
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -101,7 +104,7 @@ public class MainActivity extends FragmentActivity {
 			company.setName(getResources().getString(R.string.egramit));
 			companiesList.add(company);
 			
-			CustomAdapter adapter = new CustomAdapter(context, companiesList);
+			CustomAdapter adapter = new CustomAdapter(getActivity(), companiesList);
 			listView.setAdapter(adapter);
 			
 			
@@ -112,8 +115,9 @@ public class MainActivity extends FragmentActivity {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
-
+					
 					RightFragment rightFragment = new RightFragment(position);
+					getFragmentManager().beginTransaction().add(R.id.right_fragment, rightFragment).commit();
 
 				}
 
@@ -133,6 +137,7 @@ public class MainActivity extends FragmentActivity {
 
 		public RightFragment(int position) {
 			this.position = position;
+			
 		}
 
 		public RightFragment() {
@@ -145,18 +150,23 @@ public class MainActivity extends FragmentActivity {
 					false);
 
 			ImageView imageView = (ImageView) rootView.findViewById(R.id.image);
-			imageView.setBackgroundResource(R.drawable.ic_launcher);
+			
+			
 			switch(position){
 			case 0:
+				imageView.setBackgroundResource(R.drawable.blank);
 				imageView.setBackgroundResource(R.drawable.pcs);
 				break;
 			case 1:
+				imageView.setBackgroundResource(R.drawable.blank);
 				imageView.setBackgroundResource(R.drawable.paradigm_infotech);
 				break;
 			case 2:
+				imageView.setBackgroundResource(R.drawable.blank);
 				imageView.setBackgroundResource(R.drawable.ecentric);
 				break;
 			case 3:
+				imageView.setBackgroundResource(R.drawable.blank);
 				imageView.setBackgroundResource(R.drawable.egramit);
 				break;
 			}
