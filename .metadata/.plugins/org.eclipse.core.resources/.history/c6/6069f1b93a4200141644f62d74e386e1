@@ -1,0 +1,117 @@
+package com.pcs.paradigmit;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+import com.pcs.model.Companies;
+
+public class MainActivity extends FragmentActivity {
+
+	private ArrayList<Companies> companiesList;
+	private ListView listView;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		companiesList = new ArrayList<Companies>();
+		listView = (ListView) findViewById(R.id.listview);
+
+
+		
+			getSupportFragmentManager().beginTransaction()
+			.add(R.id.left_fragment, new LeftFragment()).commit();
+		
+		
+		getSupportFragmentManager().beginTransaction()
+		.add(R.id.right_fragment, new RightFragment()).commit();
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A left fragment containing a simple view.
+	 */
+	public static class LeftFragment extends Fragment {
+
+		public LeftFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_left, container,
+					false);
+			final ListView listCompanies = (ListView) rootView.findViewById(R.id.listview);
+			listCompanies.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+				
+					RightFragment rightFragment = new RightFragment(position);
+							
+				}
+				
+				
+			});
+			return rootView;
+		}
+	}
+	
+	public static class RightFragment extends Fragment {
+
+		private int position;
+
+		public RightFragment(int position) {
+			this.position = position;
+		}
+
+		public RightFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_right, container,
+					false);
+			
+			
+			return rootView;
+		}
+	}
+}
+}
