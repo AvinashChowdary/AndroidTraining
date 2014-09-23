@@ -1,0 +1,215 @@
+package com.pcs.dowloader;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+
+
+public class MainActivity extends FragmentActivity {
+
+	private static final int SHOW = 1;
+	private static TextView idTxt;
+	private static TextView aboutTxt;
+	private static TextView categoryTxt;
+	private static TextView checkinsTxt;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+
+	}
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+		String url=null;
+		
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+			EditText urlEdt = (EditText) rootView.findViewById(R.id.get_url);
+			idTxt = (TextView) rootView.findViewById(R.id.id_display);
+			aboutTxt = (TextView) rootView.findViewById(R.id.about_display);
+			checkinsTxt = (TextView) rootView.findViewById(R.id.checkins_display);
+			categoryTxt = (TextView) rootView.findViewById(R.id.category_display);
+			
+			url = urlEdt.getText().toString();
+
+			Button downloadBtn = (Button) rootView.findViewById(R.id.download_btn);
+			downloadBtn.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					new Downloader().execute(url);
+				}
+			});
+
+			return rootView;
+		}
+	}
+
+	public static class Downloader extends AsyncTask<String, Integer, String>{
+
+		private Context mContext;
+		private StringBuilder stringBuilder=null;
+		private ProgressDialog  progressDialog ;
+
+		public Downloader(Context context){
+			mContext = context;
+		}
+
+		public Downloader() {
+		}
+
+		@Override
+		protected void onPreExecute() {
+
+			super.onPreExecute();
+			progressDialog = new ProgressDialog(mContext);
+			progressDialog.setTitle(R.string.title);
+			progressDialog.setProgress(1);
+			progressDialog.setMax(100);
+			progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			progressDialog.setCancelable(true);
+			progressDialog.show();
+		}
+
+
+		@Override
+		protected String doInBackground(String... params) {
+			
+			String line=null;
+			
+			try {
+				
+				URL url = new URL(params[0]);
+				URLConnection connection= url.openConnection();
+				
+				connection.connect();
+				
+				int lenOfFile = connection.getContentLength();
+				
+				InputStream inputStream = connection.getInputStream();
+				InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+				
+				BufferedReader bufferReader = new BufferedReader(inputStreamReader);
+				 
+				stringBuilder = new StringBuilder();
+				
+				while ((line = bufferReader.readLine()) != null) {
+					
+					publishProgress(100/lenOfFile);
+					stringBuilder.append(line);
+					
+				}
+				
+				
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			return stringBuilder.toString();
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... values) {
+			super.onProgressUpdate(values[0]);
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			super.onPostExecute(result);
+			progressDialog.dismiss());
+			
+			try {
+				
+				JSONObject jsonObj = new JSONObject(result);
+				
+				if(jsonObj.has("id")){
+					
+					String id = jsonObj.getString("id");
+					idTxt.setText("ID : "+id+" ");
+				}
+				if(jsonObj.has("about")){
+					
+					String about = jsonObj.getString("about");
+					aboutTxt.setText("About : "+about+" ");
+				}
+				if(jsonObj.has("category")){
+					
+					String category = jsonObj.getString("category");
+					categoryTxt.setText("Category : "+category+" ");
+				}
+				if(jsonObj.has("checkins")){
+					
+					String checkins = jsonObj.getString("checkins");
+					checkinsTxt.setText("Checkins : "+checkins+" ");
+				}
+				
+				
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			
+		}
+
+
+
+	}
+
+}
+
