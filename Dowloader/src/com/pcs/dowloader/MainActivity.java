@@ -3,6 +3,7 @@ package com.pcs.dowloader;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -60,5 +61,29 @@ public class MainActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
+    }
+    
+    public static class Downloader extends AsyncTask<Void, Void, Void>{
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+		}
+    	
+    	@Override
+		protected Void doInBackground(Void... params) {
+			return null;
+		}
+    	
+    	@Override
+    	protected void onProgressUpdate(Void... values) {
+    		super.onProgressUpdate(values);
+    	}
+    	
+    	@Override
+    	protected void onPostExecute(Void result) {
+    		super.onPostExecute(result);
+    	}
+    	
     }
 }
