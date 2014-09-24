@@ -1,0 +1,7 @@
+package com.pcs.adapters;
+
+import android.widget.BaseAdapter;
+
+public class ColleaguesAdapter extends BaseAdapter{
+
+}

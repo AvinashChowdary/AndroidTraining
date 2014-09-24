@@ -1,0 +1,85 @@
+package com.pcs.adapters;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.example.facebookparsing.R;
+import com.pcs.model.Colleagues;
+
+public class ColleaguesAdapter extends BaseAdapter{
+
+	private ArrayList<Colleagues> colleaguesList;
+	private Context mContext;
+	private LayoutInflater layoutInflater;
+
+
+	public ColleaguesAdapter(Context context, ArrayList<Colleagues> colleagues) {
+
+		mContext = context;
+		colleaguesList = colleagues;
+		layoutInflater = LayoutInflater.from(mContext);
+	}
+	@Override
+	public int getCount() {
+
+		return colleaguesList.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+
+		return colleaguesList.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		Holder holder = null;
+		if(convertView == null){
+
+			holder = new Holder();
+
+			convertView = layoutInflater.inflate(R.layout.listview_layout, null);
+
+			holder.name = (TextView) convertView.findViewById(R.id.name_txt);
+			holder.gender = (TextView) convertView.findViewById(R.id.gender_txt);
+			holder.id = (TextView) convertView.findViewById(R.id.id_txt);
+			holder.locale = (TextView) convertView.findViewById(R.id.locale_txt);
+
+			convertView.setTag(holder);
+		}
+		else{
+			convertView.getTag();
+		}
+
+		holder.name.setText(colleaguesList.get(position).getName());
+		holder.gender.setText(colleaguesList.get(position).getGender());
+		holder.id.setText(colleaguesList.get(position).getId());
+		holder.locale.setText(colleaguesList.get(position).getLocale());
+
+		return convertView;
+	}
+
+	public void addUsers (ArrayList<DeveloperDetails> userslist) throws IllegalArgumentException { if(developers!=null) { userslist = new ArrayList<DeveloperDetails>(); } if(userslist!=null ) { for (DeveloperDetails developer : userslist) { developers.add(developer); } notifyDataSetChanged(); } else throw new IllegalArgumentException("UsersList should not be null"); } /** * takes user object as a argument * if user is null then throws IllegalArgumentException * @param user * @throws IllegalArgumentException */ public void addUser(DeveloperDetails developer) throws IllegalArgumentException { if(developers!=null) { developers.add(developer); notifyDataSetChanged(); } 
+	else throw new IllegalArgumentException("User Object should not be null"); } }
+}
+
+public class Holder{
+	public TextView name;
+	public TextView gender;
+	public TextView id;
+	public TextView locale;
+}
+
+}
