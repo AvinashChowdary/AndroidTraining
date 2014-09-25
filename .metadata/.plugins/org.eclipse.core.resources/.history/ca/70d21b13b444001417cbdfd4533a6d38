@@ -10,11 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.pcs.constants.Constants;
-/**
- * This class is used to Start a broadcast 
- * @author Avinash
- *
- */
+
 public class DownloadActivity extends Activity {
 
 	@Override
@@ -32,11 +28,9 @@ public class DownloadActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				//Displaying toast for downloading
 				Toast.makeText(DownloadActivity.this, getResources().getString(R.string.downloading_txt), Toast.LENGTH_LONG).show();
 				Intent intent = new Intent();
 				intent.setAction("com.pcs.DOWNLOAD");
-				//Sending Broadcast
 				sendBroadcast(intent);
 
 			}

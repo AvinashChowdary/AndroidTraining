@@ -11,13 +11,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-/**
- * This class is created with UI to take text as input
- * on clicking a button it moves to Broadcast Receiver
- * @author Avinash
- *
- */
-
+//This class is created with UI to take text as input
+//on clicking a button it moves to Broadcast Receiver
 public class BroadcastActivity extends Activity{
 
 	@Override

@@ -11,7 +11,7 @@ import com.pcs.constants.Constants;
 
 /**
  * This class is used to receive message and send a Notification
- * @author Avinash
+ * @author pcs-05
  *
  */
 public class BroadcastReceiver extends android.content.BroadcastReceiver{
@@ -47,13 +47,9 @@ public class BroadcastReceiver extends android.content.BroadcastReceiver{
 		//Setting Pending Intent to Notification Builder
 		notificationBuilder.setContentIntent(pendingIntent);
 		notificationBuilder.setAutoCancel(true);
-		
-		//Setting Flags to ensure that new activity is not started
-		//Removing Top Activity from stack
-		//creating new task
+
 		notificationIntent.setFlags(notificationIntent.FLAG_ACTIVITY_NEW_TASK | notificationIntent.FLAG_ACTIVITY_CLEAR_TASK);
 
-		//Notifying notification
 		notificationManager.notify(REQ_A, notificationBuilder.build());
 
 

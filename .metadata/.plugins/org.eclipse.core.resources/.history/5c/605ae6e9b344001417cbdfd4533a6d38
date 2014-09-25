@@ -11,7 +11,7 @@ import com.pcs.constants.Constants;
 
 /**
  * This class is used to receive message and send a Notification
- * @author Avinash
+ * @author pcs-05
  *
  */
 public class BroadcastReceiver extends android.content.BroadcastReceiver{

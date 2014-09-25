@@ -9,25 +9,21 @@ import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
 
-/**
- * This class is used to start a notification along with progress
- * @author Avinash
- *
- */
+
 public class Downloader extends BroadcastReceiver{
 	private static final int REQ_B=108;
 	@Override
 	public void onReceive(Context context, Intent intent) {
 
 		
-		//NotificationCompat for the activity context
+
 		final NotificationCompat.Builder notificationBuilder = 
 				new NotificationCompat.Builder(context);
-		//Adding icon, Title, Text for Notification
+		
 		notificationBuilder.setSmallIcon(R.drawable.app_icon);
 		notificationBuilder.setContentTitle(context.getResources().getString(R.string.download_txt));
 		notificationBuilder.setContentText(context.getResources().getString(R.string.downloading_txt));
-		//Getting Notification Manager
+		
 		final NotificationManager notificationManager = 
 				(NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 		
@@ -40,12 +36,10 @@ public class Downloader extends BroadcastReceiver{
 				
 		notificationBuilder.setContentIntent(pendingIntent);
 		notificationBuilder.setAutoCancel(true);
-		//Setting Flags to ensure that new activity is not started
-				//Removing Top Activity from stack
-				//creating new task
+		
 		notificationIntent.setFlags(notificationIntent.FLAG_ACTIVITY_NEW_TASK | notificationIntent.FLAG_ACTIVITY_CLEAR_TASK);
 		
-		//using threads for displaying progress
+		
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
