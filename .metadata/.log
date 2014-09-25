@@ -254,3 +254,6 @@ Binding(CTRL+SHIFT+\,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2014-09-25 12:31:52.355
+!MESSAGE main_layout.xml: Couldn't resolve resource @string/download_txt

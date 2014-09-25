@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Notifications</string>
+    <string name="msg">Message</string>
+    <string name="msg_hint">Enter Message !!!</string>
+    <string name="download_txt">Download</string>
+
+</resources>
