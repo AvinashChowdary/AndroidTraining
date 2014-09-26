@@ -1,0 +1,95 @@
+package com.pcs.mapsapp;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MapsActivity extends Activity{
+
+	private GoogleMap mMaps;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.maps_layout);
+
+		
+		
+		initializeMap();
+		
+		mMaps.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+		
+		mMaps.setMyLocationEnabled(true);
+		
+		mMaps.getUiSettings().setZoomGesturesEnabled(true);
+		
+		mMaps.getUiSettings().setCompassEnabled(true);
+		
+		mMaps.getUiSettings().setMyLocationButtonEnabled(true);
+		
+		mMaps.getUiSettings().setRotateGesturesEnabled(true);
+		
+
+	LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE); 
+	Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+	double longitude = location.getLongitude();
+	double latitude = location.getLatitude();
+	
+	for(int i=0;i<=30;i=i+10){
+		
+		MarkerOptions mMarker = new MarkerOptions();
+		
+		mMarker.position(new LatLng(latitude, longitude));
+		mMarker.title(getResources().getString(R.string.default_title));
+		
+		if(i == 0){
+			mMarker.icon(BitmapDescriptorFactory.defaultMarker(R.drawable.atm_icon));
+			
+		}
+		if(i == 10){
+			mMarker.icon(BitmapDescriptorFactory.defaultMarker(R.drawable.coffee_pointer));
+			
+		}
+		if(i == 20){
+			mMarker.icon(BitmapDescriptorFactory.defaultMarker(R.drawable.petrol_icon));
+			
+		}
+		if(i == 30){
+			mMarker.icon(BitmapDescriptorFactory.defaultMarker(R.drawable.hosp_icon));
+			
+		}
+		
+	}
+		
+}	
+
+	@SuppressLint("NewApi") 
+	private void initializeMap() {
+		
+		if(mMaps == null){
+
+			mMaps = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();	
+		}
+
+		if(mMaps == null){
+
+			Toast.makeText(getBaseContext(), 
+					getResources().getString(R.string.map_not_found), 
+					Toast.LENGTH_LONG).show();	
+		}
+	}
+
+
+}

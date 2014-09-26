@@ -1,0 +1,33 @@
+package com.pcs.mapsapp;
+
+import com.google.android.gms.maps.GoogleMap;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class MapsActivity extends Activity{
+
+	private GoogleMap mMaps;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.maps_layout);
+
+		private void initializeMap(){
+
+			if(mMaps == null){
+
+				mMaps = (getFragmentManager().findFragmentById(R.id.map)).getMap();	
+			}
+
+			if(mMaps == null){
+
+				mMaps = (getFragmentManager().findFragmentById(R.id.map)).getMap();	
+			}
+		}
+	}
+
+
+}

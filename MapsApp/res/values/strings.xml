@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Maps App</string>
+    <string name="map_not_found">Map Not Created. Try Again ...</string>
+	<string name="default_title">My Apps</string>
+    
+</resources>
