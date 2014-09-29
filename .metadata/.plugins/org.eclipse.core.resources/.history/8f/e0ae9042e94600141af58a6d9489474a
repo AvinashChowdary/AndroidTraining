@@ -1,0 +1,33 @@
+package com.pcs.sharedpreferences;
+
+import com.example.sharedpreferences.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class SharedActivity extends Activity{
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.shared_layout);
+		
+		EditText nameEdt = (EditText) findViewById(R.id.name);
+		EditText pwdEdt = (EditText) findViewById(R.id.pwd);
+		Button loginBtn = (Button) findViewById(R.id.login);
+		
+		loginBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+
+				
+			}
+		});
+	}
+
+}

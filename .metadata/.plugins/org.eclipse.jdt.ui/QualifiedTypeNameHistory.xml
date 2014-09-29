@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+<fullyQualifiedTypeName name="com.example.sharedpreferences.R"/>
+<fullyQualifiedTypeName name="com.example.sharedpreferences.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.example.sharedpreferences.R.id"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences.Editor"/>
+<fullyQualifiedTypeName name="com.pcs.sharedpreferences.ResultActivity"/>
+<fullyQualifiedTypeName name="com.example.sharedpreferences.R.string"/>
+<fullyQualifiedTypeName name="com.pcs.constants.Constants"/>
+<fullyQualifiedTypeName name="com.pcs.constants.Constants.IntentExtras"/>
+</qualifiedTypeNameHistroy>

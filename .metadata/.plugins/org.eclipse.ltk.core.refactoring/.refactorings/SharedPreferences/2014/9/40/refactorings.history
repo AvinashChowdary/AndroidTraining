@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;Constants&apos; to &apos;com.pcs.constants&apos;&#x0D;&#x0A;- Original project: &apos;SharedPreferences&apos;&#x0D;&#x0A;- Original element: &apos;SharedPreferences/src/Constants&apos;&#x0D;&#x0A;- Renamed element: &apos;SharedPreferences/src/com.pcs.constants&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Constants&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;Constants" name="com.pcs.constants" qualified="false" references="true" stamp="1411892990477" textual="false" version="1.0"/>
+</session>
