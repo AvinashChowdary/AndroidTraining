@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Contacts DB</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_hint">Enter Name</string>
+    <string name="number_hint">Enter Number</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="save_btn">Save</string>
+    <string name="view_btn">View</string>
+    <string name="delete_btn">Delete</string>
+    <string name="display_btn">Display</string>
+
+</resources>
