@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="city">Enter City Name : </string>
+    <string name="weather_banner">Weather</string>
+    <string name="name_hint">Enter City Name</string>
+    <string name="get_weather">Get Weather</string>
+    <string name="pcs">Paradigm Creatives Cloud</string>
+    <string name="pcs_cloud">Log in to Paradigm Creatives Cloud</string>
+    <string name="username">Username</string>
+    <string name="username_hint">Email</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Password</string>
+    <string name="login">Log In</string>
+    <string name="forgot">Forgot Password? </string>
+    <string name="title">Downloading Weather Data</string>
+    <string name="city_string">City : </string>
+    <string name="temp_string">Temperature : </string>
+    <string name="humidity_string">Humidity : </string>
+    <string name="min_string">Min Temp : </string>
+    <string name="max_string">Max Temp : </string>
+    
+
+</resources>
