@@ -4,7 +4,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="16"
         android:targetSdkVersion="21" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -15,13 +15,14 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".OpeningActivity">
             <intent-filter>
-               <action android:name="android.intent.action.MAIN"/>
+              <action android:name="android.intent.action.MAIN"/>
                
-                <action android:name="com.pcs.opener.OpeningAcitivy.SHOW_IMAGE"/>
-                <action android:name="com.pcs.opener.OpeningAcitivy.SHOW_TEXT"/>
-                <action android:name="com.pcs.opener.OpeningAcitivy.SHOW_WEBPAGE"/>
+                <action android:name="com.pcs.opener.SHOW_IMAGE"/>
+                <action android:name="com.pcs.opener.SHOW_TEXT"/>
+                <action android:name="com.pcs.opener.SHOW_WEBPAGE"/>
                
                 <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>

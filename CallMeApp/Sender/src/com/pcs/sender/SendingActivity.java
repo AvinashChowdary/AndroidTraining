@@ -1,14 +1,13 @@
 package com.pcs.sender;
 
-import com.pcs.constants.Constants;
-
 import android.app.Activity;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.pcs.constants.Constants;
 
 public class SendingActivity extends Activity implements OnClickListener{
 
@@ -36,20 +35,26 @@ public class SendingActivity extends Activity implements OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		
-			
+
+
 		switch (v.getId()) {
 		case R.id.image:
-			Intent imageIntent=new Intent(Constants.IntentExtras.IMAGE); 
+			
+			Intent imageIntent=new Intent(Constants.IntentExtras.IMAGE);
+			imageIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 			startActivity(imageIntent);
+
+
 			break;
 		case R.id.text:
 			Intent textIntent=new Intent(Constants.IntentExtras.TEXT);
+			textIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 			startActivity(textIntent);
 			break;
 
 		case R.id.webpage:
 			Intent webpageIntent=new Intent(Constants.IntentExtras.WEBPAGE);
+			webpageIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 			startActivity(webpageIntent);
 			break;
 
