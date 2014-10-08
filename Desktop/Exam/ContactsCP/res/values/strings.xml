@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Contacts CP</string>
+    
+    <string name="name_hint">Enter Name</string>
+    <string name="number_hint">Enter Phone Number</string>
+    <string name="home_hint">Home / Office</string>
+    <string name="email_hint">Email-id</string>
+    <string name="add_btn">Add Contact</string>
+    <string name="get_btn">Get Contact</string>
+   
+
+</resources>

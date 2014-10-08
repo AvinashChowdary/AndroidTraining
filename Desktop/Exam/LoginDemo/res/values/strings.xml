@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">LoginDemo</string>
+    <string name="username_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_txt">Log in</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="welcome_msg">Welcome</string>
+    <string name="login_fail">Login Credentials are wrong</string>
+    <string name="login_null">Login Details are Null</string>
+
+</resources>

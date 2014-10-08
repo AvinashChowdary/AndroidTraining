@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Notifications</string>
+    <string name="msg_title">New Notification</string>
+    <string name="message">New Message</string>
+    <string name="notification">Welcome to Notifications</string>
+
+</resources>
