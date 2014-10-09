@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Display Contacts</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="display_txt">Display</string>
+    <string name="delete_txt">Delete All</string>
+    <string name="delete_toast">Contacts Deleted</string>
+    <string name="not_deleted">No Contacts found to Delete</string>
+    <string name="no_contacts">No Contacts found to Display</string>
+    <string name="name_txt">Name</string>
+    <string name="id_txt">ID</string>
+    <string name="email_txt">Email</string>
+    <string name="number_txt">Phone Number</string>
+    <string name="home_txt">Home / Office</string>
+
+</resources>
