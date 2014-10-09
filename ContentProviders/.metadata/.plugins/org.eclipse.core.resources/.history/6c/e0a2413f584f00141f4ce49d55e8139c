@@ -1,0 +1,22 @@
+package com.example.displaycontacts;
+
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+
+public class DisplayActivity extends ActionBarActivity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_display);
+
+		Uri mUri = Uri
+				.parse("content://com.pcs.provider.ContactProvider/contact");
+
+		Cursor mCursor = new Cursor(this, mUri, null, null, null, null);
+
+	}
+
+}
