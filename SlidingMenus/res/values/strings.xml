@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sliding Menus</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_txt">Home</string>
+    <string name="profile_txt">Profile</string>
+    <string name="contacts_txt">Contatcs</string>
+    <string name="messages_txt">Messages</string>
+    <string name="likes_txt">Likes</string>
+    <string name="tasks_txt">Tasks</string>
+    <string name="avinash_txt">Avinash Chowdary</string>
+    <string name="age_txt">22</string>
+    <string name="gender_txt">Male</string>
+    <string name="company_txt">Paradigm Creatives</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="timeline">Timeline</string>
+    <string name="welcome">Welcome Mr. R.Avinash To Sliding Menus Application. Wish you have a pleasant experience with our application. Inconvienience is deeply regreted. Donot hesitate to report any Bugs. Thank you ...</string>
+    <string name="likes">You have 99 Likes</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="missed">Missed tasks</string>
+    <string name="coming">Coming Up</string>
+    <string name="tasks">Show Tasks From</string>
+    <string name="new_message">Unread Message</string>
+    <string name="read_message">Read Message</string>
+
+</resources>
