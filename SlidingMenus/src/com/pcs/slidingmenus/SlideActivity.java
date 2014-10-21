@@ -1,6 +1,7 @@
 package com.pcs.slidingmenus;
 
 
+
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -18,10 +19,12 @@ import com.pcs.fragments.LikesFragment;
 import com.pcs.fragments.MessagesFragment;
 import com.pcs.fragments.ProfileFragment;
 import com.pcs.fragments.TasksFragment;
-
+/**
+ * This class is used to show sliding menus 
+ */
 public class SlideActivity extends FragmentActivity implements
 OnItemClickListener {
-
+	//Drawer layout is taken in java instead of xml
 	private DrawerLayout drawerLayout = null;
 	private ListView listView = null;
 	private ActionBarDrawerToggle actionBarDrawerToggle = null;
@@ -32,9 +35,9 @@ OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.slide_layout);
-
-		slideList = new String[] { "Home", "Profile", "Messages", "Likes",
-		"Tasks" };
+		//List of items for list view
+		slideList = new String[] { R.string.home_txt, R.string.profile_txt, R.string.messages_txt, R.string.likes_txt,
+				R.string.tasks_txt };
 
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -43,11 +46,13 @@ OnItemClickListener {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setDisplayShowHomeEnabled(true);
 		getActionBar().setDisplayShowTitleEnabled(true);
-
+		
+		//Adding list to adapter
 		SlidingListAdapter adapter = new SlidingListAdapter(
 				getApplicationContext(), slideList);
+		//Adding adapter too listview
 		listView.setAdapter(adapter);
-
+		//Using Action Bar Drawer toggle to slide in and out the sliding menu
 		actionBarDrawerToggle = new ActionBarDrawerToggle(SlideActivity.this,
 				drawerLayout, R.drawable.menu, R.string.open, R.string.close) {
 
@@ -59,9 +64,9 @@ OnItemClickListener {
 				super.onDrawerOpened(drawerView);
 			}
 		};
-
+		//Adding drawer listener
 		drawerLayout.setDrawerListener(actionBarDrawerToggle);
-
+		//Adding Click listener for items in list
 		listView.setOnItemClickListener(this);
 	}
 
@@ -83,7 +88,7 @@ OnItemClickListener {
 		selectItem(position);
 
 	}
-
+	//Adding fragments based on the position in list selected
 	private void selectItem(int position) {
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 

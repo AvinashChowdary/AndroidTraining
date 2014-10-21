@@ -8,7 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.pcs.slidingmenus.R;
-
+/**
+ * Adapter to set a list to the sliding menu
+ */
 public class SlidingListAdapter extends BaseAdapter {
 
 	private Context context;
@@ -42,11 +44,11 @@ public class SlidingListAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-
+		//inflating layout
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		convertView = inflater.inflate(R.layout.sliding_list_xml, null);
-
+		//Finding and adding text to textview
 		TextView textView = (TextView) convertView.findViewById(R.id.item);
 		textView.setText(list[position]);
 
