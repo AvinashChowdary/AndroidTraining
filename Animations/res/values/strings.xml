@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Animations</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="german">hallo Welt</string>
+    <string name="spanish">hola mundo</string>
+    <string name="french">Bonjour tout le monde</string>
+    <string name="action_settings">Settings</string>
+    <string name="fade_in_txt">Fade In</string>
+    <string name="fade_out_txt">Fade Out</string>
+    <string name="rotate_txt">Rotate Text</string>
+    <string name="zoom_in_txt">Zoom In</string>
+    <string name="zoom_out_txt">Zoom Out</string>
+    <string name="bounce_txt">Bounce</string>
+    <string name="slide_txt">Slide</string>
+    <string name="flip_txt">Flip</string>
+
+</resources>

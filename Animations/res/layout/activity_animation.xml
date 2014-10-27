@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="0"
+        android:text="@string/hello_world"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="horizontal" >
+
+        <ToggleButton
+            android:id="@+id/fade_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textOff="@string/fade_out_txt"
+            android:textOn="@string/fade_in_txt"
+            android:textSize="15sp" />
+
+        <ToggleButton
+            android:id="@+id/zoom_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textOff="@string/zoom_out_txt"
+            android:textOn="@string/zoom_in_txt"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/rotate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/rotate_txt"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/slide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/slide_txt"
+            android:textSize="15sp" />
+        
+         <Button
+            android:id="@+id/flip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/flip_txt"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>
