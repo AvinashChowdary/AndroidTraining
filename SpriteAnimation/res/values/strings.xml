@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Sprite Animation</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="title">The below is an animation from the sprite image</string>
+
+</resources>
