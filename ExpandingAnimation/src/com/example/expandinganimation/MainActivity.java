@@ -13,7 +13,7 @@ import android.widget.LinearLayout.LayoutParams;
 public class MainActivity extends Activity implements OnClickListener {
 
 	private ImageView red, green, blue;
-	private Animation zoom, slideUp, slideDown;
+	private Animation zoom, slideUp, slideDown, zoomDown, zoomUp;
 	private static final int RED = 1, GREEN = 2, BLUE = 3;
 
 	@Override
@@ -29,9 +29,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		green.setOnClickListener(this);
 		blue.setOnClickListener(this);
 
-		zoom = AnimationUtils.loadAnimation(this, R.anim.animation);
+		zoom = AnimationUtils.loadAnimation(this, R.anim.zoom);
 		slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up);
 		slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
+		zoomDown = AnimationUtils.loadAnimation(this, R.anim.zoom_down);
+		zoomUp = AnimationUtils.loadAnimation(this, R.anim.zoom_up);
 
 	}
 
@@ -61,7 +63,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				LinearLayout.LayoutParams.MATCH_PARENT);
 
 		if (color == RED) {
-			red.startAnimation(zoom);
+			red.startAnimation(zoomDown);
 			blue.startAnimation(slideDown);
 			green.startAnimation(slideDown);
 		} else if (color == GREEN) {
@@ -69,7 +71,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			blue.startAnimation(slideDown);
 			red.startAnimation(slideUp);
 		} else {
-			blue.startAnimation(zoom);
+			blue.startAnimation(zoomUp);
 			red.startAnimation(slideUp);
 			green.startAnimation(slideUp);
 		}
