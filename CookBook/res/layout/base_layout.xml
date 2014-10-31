@@ -25,11 +25,11 @@
             android:id="@+id/sliding_drawer_fridge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:content="@+id/sliding_content_fridge"
             android:handle="@+id/sliding_handle_fridge"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:visibility="visible" >
 
             <LinearLayout
                 android:id="@+id/sliding_handle_fridge"
@@ -44,33 +44,60 @@
                     android:layout_weight="1"
                     android:background="@drawable/fridge_icon"
                     android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/fridge_oven_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/oven_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fridge_fast_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fast_settings_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fridge_settings_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
             </LinearLayout>
 
-            <LinearLayout
+            <ScrollView
                 android:id="@+id/sliding_content_fridge"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F7E7CE"
+                android:background="#00FF00"
                 android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/text_view"
+                <ListView
+                    android:id="@+id/fridge_list_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textSize="30sp" />
-            </LinearLayout>
+            </ScrollView>
         </SlidingDrawer>
 
         <SlidingDrawer
             android:id="@+id/sliding_drawer_oven"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:content="@+id/sliding_content_oven"
             android:handle="@+id/sliding_handle_oven"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:visibility="visible" >
 
             <LinearLayout
                 android:id="@+id/sliding_handle_oven"
@@ -79,38 +106,66 @@
                 android:orientation="vertical" >
 
                 <Button
+                    android:id="@+id/oven_fridge_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fridge_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
                     android:id="@+id/oven_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/oven_icon"
                     android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/oven_fast_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fast_settings_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/oven_settings_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
             </LinearLayout>
 
-            <LinearLayout
+            <ScrollView
                 android:id="@+id/sliding_content_oven"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F7E7CE"
+                android:background="#FF00FF"
                 android:orientation="vertical" >
 
-                <TextView
+                <ListView
+                    android:id="@+id/oven_list_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textSize="30sp" />
-            </LinearLayout>
+            </ScrollView>
         </SlidingDrawer>
 
         <SlidingDrawer
             android:id="@+id/sliding_drawer_fast_settings"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:content="@+id/sliding_content_fast_settings"
             android:handle="@+id/sliding_handle_fast_settings"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:visibility="visible" >
 
             <LinearLayout
                 android:id="@+id/sliding_handle_fast_settings"
@@ -119,44 +174,99 @@
                 android:orientation="vertical" >
 
                 <Button
-                    android:id="@+id/fast_settings_btn"
+                    android:id="@+id/fast_fridge_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fridge_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fast_oven_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/oven_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fast_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/fast_settings_icon"
                     android:padding="5dp" />
+
+                <Button
+                    android:id="@+id/fast_settings_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
             </LinearLayout>
 
-            <LinearLayout
+            <ScrollView
                 android:id="@+id/sliding_content_fast_settings"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F7E7CE"
+                android:background="#0000FF"
                 android:orientation="vertical" >
 
-                <TextView
+                <ListView
+                    android:id="@+id/fast_list_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textSize="30sp" />
-            </LinearLayout>
+            </ScrollView>
         </SlidingDrawer>
 
         <SlidingDrawer
             android:id="@+id/sliding_drawer_settings"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:content="@+id/sliding_content_settings"
             android:handle="@+id/sliding_handle_settings"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:visibility="visible" >
 
             <LinearLayout
                 android:id="@+id/sliding_handle_settings"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/settings_fridge_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fridge_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/settings_oven_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/oven_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/settings_fast_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fast_settings_icon"
+                    android:padding="5dp"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/settings_btn"
@@ -167,19 +277,20 @@
                     android:padding="5dp" />
             </LinearLayout>
 
-            <LinearLayout
+            <ScrollView
                 android:id="@+id/sliding_content_settings"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F7E7CE"
+                android:background="#000000"
                 android:orientation="vertical" >
 
-                <TextView
+                <ListView
+                    android:id="@+id/settings_list_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textSize="30sp" />
-            </LinearLayout>
+            </ScrollView>
         </SlidingDrawer>
     </LinearLayout>
 
