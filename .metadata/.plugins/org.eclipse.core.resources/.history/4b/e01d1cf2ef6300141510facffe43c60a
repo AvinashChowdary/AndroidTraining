@@ -1,0 +1,23 @@
+package com.pcs.inboxdemo;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+public class InboxActivity extends Activity {
+
+	private ImageView topImg;
+	private ImageView listImg;
+	private String[] names = {"Avinash","Sailika", "Dharma", "Anitha","Kalyani"};
+	private String[] data = {"Hi, How are you ?","What are you doing ?", "Did u complete your task for today", "Tomorrow is a holiday","Collect 60rs each for Bday party"};
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main_layout);
+
+
+	}
+
+}

@@ -1,0 +1,34 @@
+package com.pcs.inboxdemo;
+
+import com.pcs.adapters.ListAdapter;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+public class InboxActivity extends Activity {
+
+	private ImageView topImg;
+	private ImageView listImg;
+	private String[] names = { "Avinash", "Sailika", "Dharma", "Anitha",
+			"Kalyani" };
+	private String[] data = { "Hi, How are you ?", "What are you doing ?",
+			"Did u complete your task for today", "Tomorrow is a holiday",
+			"Collect 60rs each for Bday party" };
+	private ListView listView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main_layout);
+		
+		topImg = (ImageView) findViewById(R.id.not_flipped_img);
+		listView = (ListView) findViewById(R.id.list_view);
+		
+		ListAdapter adapter = new ListAdapter(getApplicationContext(), names, data);
+		listView.setAdapter(adapter);
+	}
+
+}

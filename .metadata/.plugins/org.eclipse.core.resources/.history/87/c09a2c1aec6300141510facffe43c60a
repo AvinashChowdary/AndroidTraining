@@ -1,0 +1,15 @@
+package com.pcs.inboxdemo;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class InboxActivity extends Activity {
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+	
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.list_view);
+	}
+
+}

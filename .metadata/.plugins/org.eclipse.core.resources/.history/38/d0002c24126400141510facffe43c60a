@@ -1,0 +1,76 @@
+package com.pcs.adapters;
+
+import com.pcs.inboxdemo.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class ListAdapter extends BaseAdapter {
+
+	private Context context;
+	private LayoutInflater layoutInflater;
+	private String[] names;
+	private String[] data;
+
+	public ListAdapter(Context context, String[] names, String[] data) {
+		this.context = context;
+		this.names = names;
+		this.data = data;
+		layoutInflater = LayoutInflater.from(context);
+	}
+
+	@Override
+	public int getCount() {
+
+		return names.length;
+	}
+
+	@Override
+	public Object getItem(int position) {
+
+		return names[position];
+	}
+
+	@Override
+	public long getItemId(int position) {
+
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		ViewHolder holder;
+
+		if(convertView == null){
+
+			convertView = layoutInflater.inflate(R.layout.list_item, null);
+			holder=new ViewHolder();
+			holder.nameTxt=(TextView) convertView.findViewById(R.id.mail);
+			holder.dataTxt = (TextView)convertView.findViewById(R.id.content);
+			holder.pic = (ImageView) convertView.findViewById(R.id.list_not_flipped_img);
+			convertView.setTag(holder);
+		}
+		else{
+			holder = (ViewHolder) convertView.getTag();
+		}
+		
+		holder.nameTxt.setText(names[position]);
+		holder.dataTxt.setText(data[position]);
+		holder.pic.setImageResource(R.drawable.android);
+		
+		return convertView;
+	}
+
+	public class ViewHolder{
+		public TextView nameTxt;
+		public TextView dataTxt;	
+		public ImageView pic;
+	}
+
+}

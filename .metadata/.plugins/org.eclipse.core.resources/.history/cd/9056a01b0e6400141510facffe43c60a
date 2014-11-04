@@ -1,0 +1,134 @@
+package com.td.listselect;
+
+import java.util.ArrayList;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.Toast;
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.ActionMode;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+
+public class MainActivity extends SherlockActivity implements OnItemClickListener {
+
+	ListView lvMyList;
+	ArrayList<MyListItem> listItems = new ArrayList<MyListItem>();
+	ActionBar actionBar;
+	MyListAdapter myListAdapter;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		lvMyList = (ListView) findViewById(R.id.lvMyList);
+		lvMyList.setOnItemClickListener(this);
+
+		for (int i = 0; i < 20; i++) {
+			MyListItem item = new MyListItem();
+			item.setTitle("Sample Title " + (i + 1));
+			listItems.add(item);
+		}
+
+		myListAdapter = new MyListAdapter(this, listItems);
+		lvMyList.setAdapter(myListAdapter);
+
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		// show description
+
+	}
+
+	public static final class AnActionModeOfEpicProportions implements ActionMode.Callback {
+
+		Context ctx;
+
+		public AnActionModeOfEpicProportions(Context ctx) {
+			this.ctx = ctx;
+		}
+
+		@Override
+		public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+
+			menu.add("Delete").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+			menu.add("Archive").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+			menu.add("Mark unread").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+			menu.add("Move").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+			menu.add("Remove star").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+
+			return true;
+		}
+
+		@Override
+		public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+			return false;
+		}
+
+		@Override
+		public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+
+			Toast toast = null;
+
+			ArrayList<MyListItem> selectedListItems = new ArrayList<MyListItem>();
+
+			StringBuilder selectedItems = new StringBuilder();
+
+			// get items selected
+			for (MyListItem i : ((MainActivity) ctx).myListAdapter.mailList) {
+				if (i.isChecked()) {
+					selectedListItems.add(i);
+					selectedItems.append(i.getTitle()).append(", ");
+				}
+			}
+
+			if (item.getTitle().equals("Delete")) {
+				// Delete
+				toast = Toast.makeText(ctx, "Delete: " + selectedItems.toString(), Toast.LENGTH_SHORT);
+
+			} else if (item.getTitle().equals("Archive")) {
+				// Archive
+				toast = Toast.makeText(ctx, "Archive: " + selectedItems.toString(), Toast.LENGTH_SHORT);
+
+			} else if (item.getTitle().equals("Mark unread")) {
+				// Mark unread
+				toast = Toast.makeText(ctx, "Mark unread: " + selectedItems.toString(), Toast.LENGTH_SHORT);
+
+			} else if (item.getTitle().equals("Move")) {
+				// Move
+				toast = Toast.makeText(ctx, "Move: " + selectedItems.toString(), Toast.LENGTH_SHORT);
+
+			} else if (item.getTitle().equals("Remove star")) {
+				// Remove star
+				toast = Toast.makeText(ctx, "Remove star: " + selectedItems.toString(), Toast.LENGTH_SHORT);
+
+			}
+			if (toast != null) {
+				toast.show();
+			}
+			mode.finish();
+			return true;
+		}
+
+		@Override
+		public void onDestroyActionMode(ActionMode mode) {
+			// Action mode is finished reset the list and 'checked count' also
+			// set all the list items checked states to false
+			((MainActivity) ctx).myListAdapter.checkedCount = 0;
+			((MainActivity) ctx).myListAdapter.isActionModeShowing = false;
+			// set list items states to false
+			for (MyListItem item : ((MainActivity) ctx).listItems) {
+				item.setIsChecked(false);
+			}
+			((MainActivity) ctx).myListAdapter.notifyDataSetChanged();
+			Toast.makeText(ctx, "Action mode closed", Toast.LENGTH_SHORT).show();
+		}
+	}
+
+}
