@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.util.DisplayMetrics"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="com.pcs.expandables.R.drawable"/>
+<fullyQualifiedTypeName name="com.pcs.expandables.ExpandableActivity"/>
+<fullyQualifiedTypeName name="android.widget.ExpandableListView"/>
+<fullyQualifiedTypeName name="com.pcs.adapters.ExpandableAdapter"/>
+</qualifiedTypeNameHistroy>

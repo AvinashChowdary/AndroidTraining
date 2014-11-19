@@ -1,0 +1,96 @@
+package com.pcs.expandables;
+
+import java.util.ArrayList;
+
+import android.app.ExpandableListActivity;
+import android.content.Context;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ExpandableListView;
+
+import com.pcs.adapters.ExpandableAdapter;
+/**
+ * Main activity used to add expandable listview
+ * @author pcs-05
+ *
+ */
+public class ExpandableActivity extends ExpandableListActivity {
+
+	private ArrayList<String> parentItems = new ArrayList<String>();
+	private ArrayList<Object> childItems = new ArrayList<Object>();
+	
+	private DisplayMetrics metrics = new DisplayMetrics();
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		//setContentView(R.layout.activity_expandable);
+		getWindowManager().getDefaultDisplay().getMetrics(metrics);
+	    int width = metrics.widthPixels; 
+	    
+		ExpandableListView expandableList = getExpandableListView();
+
+		//Adding attributes to expandable list
+		expandableList.setDividerHeight(3);
+		expandableList.setIndicatorBounds(width - GetPixelFromDips(50), width - GetPixelFromDips(10));  
+
+		expandableList.setClickable(true);
+
+		//Adding Parents and children 
+		setParents();
+		setChildren();
+
+		//sending lists to adapter
+		ExpandableAdapter adapter = new ExpandableAdapter(parentItems, childItems);
+		//Accessing inflater method in adapter
+		adapter.setInflater((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE), this);
+		//Adding adapter to the list
+		expandableList.setAdapter(adapter);
+		//enabling on click listener to display toast
+		expandableList.setOnChildClickListener(this);
+	}
+
+
+	//Adding DUmmy values as parent
+		private void setParents() {
+			parentItems.add("Facebook");
+			parentItems.add("G+");
+			parentItems.add("Orkut");
+			parentItems.add("Twitter");
+		}
+		
+	//Adding Dummy values as children
+	private void setChildren() {
+		//Facebook Children
+		ArrayList<String> child = new ArrayList<String>();
+		child.add("Like");
+		child.add("Comment");
+		child.add("Share");
+		child.add("Poke");
+		childItems.add(child);
+
+		//G+ Children
+		child = new ArrayList<String>();
+		child.add("Follow");
+		child.add("Post");
+		child.add("Upload");
+		childItems.add(child);
+
+		//Orkut Children
+		child = new ArrayList<String>();
+		child.add("Oops!! Removed");
+		childItems.add(child);
+
+		//Twitter Children
+		child = new ArrayList<String>();
+		child.add("Follow");
+		child.add("Tweet");
+		child.add("ReTweet");
+		childItems.add(child);
+
+	}
+
+}

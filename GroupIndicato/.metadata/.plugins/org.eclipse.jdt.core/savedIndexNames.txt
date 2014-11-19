@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+D:\Android\GroupIndicato\.metadata\.plugins\org.eclipse.jdt.core
+18699378.index
+4246755817.index
+2406503243.index
