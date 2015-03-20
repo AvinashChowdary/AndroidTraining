@@ -1,0 +1,9 @@
+package com.southmp3.constants;
+
+public class Constants {
+	public static final int HOME = 10;
+	public static final int TELUGU_SONGS = 11;
+	public static final int SEARCH = 12;
+	public static final int SHARE = 13;
+	public static final int RATE = 14;
+}

@@ -1,0 +1,16 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="NavDrawer" parent="AppBaseTheme">
+
+        <!-- API 11 theme customizations can go here. -->
+        <item name="android:actionBarStyle">@style/NavDrawerActionBar</item>
+        <item name="android:actionModeBackground">@color/orange</item>
+        <item name="android:icon">@drawable/menu</item>
+        <item name="android:actionModeCloseDrawable">@drawable/back</item>
+    </style>
+
+</resources>

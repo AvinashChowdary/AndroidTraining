@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- The navigation drawer -->
+
+    <RelativeLayout
+        android:id="@+id/nav_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white" >
+
+        <RelativeLayout
+            android:id="@+id/nav_list_header"
+            android:layout_width="match_parent"
+            android:layout_height="75dp" >
+
+            <TextView
+                android:id="@+id/nav_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:text="@string/menu"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/teal" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/nav_list_header"
+            android:background="@android:color/white"
+            android:choiceMode="singleChoice"
+            android:divider="@color/teal"
+            android:dividerHeight="0.5dp" />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
