@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.facebook.widget.LikeView;
 import com.southmp3.R;
 import com.southmp3.constants.Constants;
 import com.southmp3.fragment.ContactFragment;
@@ -79,7 +80,7 @@ public class HomeActivity extends Activity {
 					Intent mIntent = new Intent(Intent.ACTION_SEND);
 					mIntent.setType("text/plain");
 					mIntent.putExtra(Intent.EXTRA_SUBJECT, "South Mp3");
-					String sAux = "\nLet me recommend you this application\n\n";
+					String sAux = "\nAll New App for Telugu Songs\n";
 					sAux = sAux
 							+ "https://play.google.com/store/apps/details?id="
 							+ HomeActivity.this.getPackageName() + "\n\n";
@@ -138,6 +139,13 @@ public class HomeActivity extends Activity {
 
 		return super.onMenuItemSelected(featureId, item);
 	}
+	
+	@Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        LikeView.handleOnActivityResult(HomeActivity.this, requestCode, resultCode, data);
+        Log.i("Faceboook", "OnActivityResult...");
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
