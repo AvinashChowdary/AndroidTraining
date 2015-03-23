@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		fbLike = (LikeView) view.findViewById(R.id.like_view);
 		fbLike.setObjectId("https://www.facebook.com/CineDope.mnh");
 		fbLike.setLikeViewStyle(LikeView.Style.BOX_COUNT);
-		fbLike.setAuxiliaryViewPosition(LikeView.AuxiliaryViewPosition.BOTTOM);
+		fbLike.setAuxiliaryViewPosition(LikeView.AuxiliaryViewPosition.INLINE);
 		fbLike.setHorizontalAlignment(LikeView.HorizontalAlignment.CENTER);
 	    
 		teluguBtn.setOnClickListener(this);

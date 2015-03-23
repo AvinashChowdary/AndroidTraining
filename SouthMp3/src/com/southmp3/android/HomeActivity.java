@@ -1,12 +1,12 @@
 package com.southmp3.android;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Gravity;
@@ -23,7 +23,6 @@ import com.southmp3.constants.Constants;
 import com.southmp3.fragment.ContactFragment;
 import com.southmp3.fragment.HomeFragment;
 import com.southmp3.fragment.SearchFragment;
-import com.southmp3.fragment.TeluguSongsFragment;
 
 public class HomeActivity extends Activity {
 
@@ -61,10 +60,6 @@ public class HomeActivity extends Activity {
 			switch (position) {
 			case Constants.HOME:
 				fragment = new HomeFragment();
-				loadFragment(fragment);
-				break;
-			case Constants.TELUGU_SONGS:
-				fragment = new TeluguSongsFragment();
 				loadFragment(fragment);
 				break;
 			case Constants.SEARCH:

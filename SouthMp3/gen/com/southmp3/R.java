@@ -1906,7 +1906,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f02004a;
         public static final int com_facebook_loginbutton_silver=0x7f02004b;
         public static final int com_facebook_logo=0x7f02004c;
-        public static final int com_facebook_picker_default_separator_color=0x7f020073;
+        public static final int com_facebook_picker_default_separator_color=0x7f020074;
         public static final int com_facebook_picker_item_background=0x7f02004d;
         public static final int com_facebook_picker_list_focused=0x7f02004e;
         public static final int com_facebook_picker_list_longpressed=0x7f02004f;
@@ -1944,7 +1944,8 @@ containing a value of this type.
         public static final int search=0x7f02006f;
         public static final int slider=0x7f020070;
         public static final int slider_icon=0x7f020071;
-        public static final int yellow_shadow=0x7f020072;
+        public static final int teal_shadow_top=0x7f020072;
+        public static final int yellow_shadow=0x7f020073;
     }
     public static final class id {
         public static final int action_bar=0x7f0b003c;
@@ -1961,9 +1962,10 @@ containing a value of this type.
         public static final int action_mode_bar_stub=0x7f0b0038;
         public static final int action_mode_close_button=0x7f0b002b;
         public static final int activity_chooser_view_content=0x7f0b002c;
-        public static final int album_btn=0x7f0b0070;
+        public static final int ads_layout=0x7f0b006e;
+        public static final int album_btn=0x7f0b0071;
         public static final int always=0x7f0b001f;
-        public static final int artist_btn=0x7f0b0071;
+        public static final int artist_btn=0x7f0b0072;
         public static final int beginning=0x7f0b0026;
         public static final int bottom=0x7f0b000f;
         public static final int box_count=0x7f0b000c;
@@ -2033,11 +2035,11 @@ containing a value of this type.
         public static final int right=0x7f0b0014;
         public static final int search_badge=0x7f0b0040;
         public static final int search_bar=0x7f0b003f;
-        public static final int search_btn=0x7f0b0072;
+        public static final int search_btn=0x7f0b0073;
         public static final int search_button=0x7f0b0041;
         public static final int search_close_btn=0x7f0b0046;
         public static final int search_edit_frame=0x7f0b0042;
-        public static final int search_edt=0x7f0b006e;
+        public static final int search_edt=0x7f0b006f;
         public static final int search_go_btn=0x7f0b0048;
         public static final int search_mag_icon=0x7f0b0043;
         public static final int search_plate=0x7f0b0044;
@@ -2050,7 +2052,7 @@ containing a value of this type.
         public static final int showHome=0x7f0b001c;
         public static final int showTitle=0x7f0b001d;
         public static final int small=0x7f0b000b;
-        public static final int song_btn=0x7f0b006f;
+        public static final int song_btn=0x7f0b0070;
         public static final int split_action_bar=0x7f0b0004;
         public static final int standard=0x7f0b000e;
         public static final int submit_area=0x7f0b0047;
@@ -2128,11 +2130,12 @@ containing a value of this type.
         public static final int com_facebook_search_bar_layout=0x7f030024;
         public static final int com_facebook_tooltip_bubble=0x7f030025;
         public static final int com_facebook_usersettingsfragment=0x7f030026;
-        public static final int drawer_list_item=0x7f030027;
-        public static final int home_fragment=0x7f030028;
-        public static final int sample=0x7f030029;
-        public static final int search_fragment=0x7f03002a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002b;
+        public static final int contacts_us_layout=0x7f030027;
+        public static final int drawer_list_item=0x7f030028;
+        public static final int home_fragment=0x7f030029;
+        public static final int sample=0x7f03002a;
+        public static final int search_fragment=0x7f03002b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002c;
     }
     public static final class menu {
         public static final int home=0x7f0d0000;
