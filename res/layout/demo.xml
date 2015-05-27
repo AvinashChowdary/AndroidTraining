@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e7ebee"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="452dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/mainheader"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:background="#0a2436" >
+
+            <RelativeLayout
+                android:id="@+id/subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp" >
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="40dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/inboxheader"
+                    android:layout_width="2dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/back"
+                    android:background="#85929B"
+                    android:paddingBottom="15dip"
+                    android:paddingTop="15dip" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/windowtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dip"
+            android:drawSelectorOnTop="false"
+            android:focusable="false"
+            android:paddingBottom="20dp"
+            android:paddingTop="0dip" />
+
+        <TextView
+            android:id="@+id/android:empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="No Data Available"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="bottom" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#092435"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/btnManualLookup"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="#4982AE"
+                    android:gravity="center"
+                    android:padding="15dip"
+                    android:text="Submit"
+                    android:textColor="#ffffff" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>
